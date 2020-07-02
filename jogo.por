@@ -1,13 +1,14 @@
 programa
 {
-	inclua biblioteca Util --> ut
-	//carta para ser impressa
-	cadeia maoJogadorUm[7]
-	cadeia maoJogadorPc[7]
+	//Professor, nao estou conseguindo colocar acento!!
 	
-	//posiçao das cartas
-	inteiro cartasJogador[6]
-	inteiro cartasPc[6]
+	inclua biblioteca Util --> ut
+	//auxilia com os booleanos
+	logico auxLogic
+	
+	//posiçao das cartas - O numero -1 e usado como um auxiliar para a condiçao
+	inteiro cartasJogador[6] = {-1, -1, -1, -1, -1, -1}
+	inteiro cartasPc[6] = {-1, -1, -1, -1, -1, -1}
 	
 	//carta do topo
 	inteiro cartaTopo
@@ -18,9 +19,12 @@ programa
 	//variavel para comparar os resultados
 	real auxCompare
 
+	//auxiliares
+	inteiro aux
+	inteiro cartaRecebida
+	
 	//carta impressa
-	cadeia cartaImpressa[9][2] = {{"======Sua carta======", ""},
-							{"Nome: ", ""},
+	cadeia cartaImpressa[8][2] = {{"Nome: ", ""},
 							{"Ranking: ", ""},
 							{"Velocidade Maxima: ", ""},
 							{"Aceleraçao: ", ""},
@@ -64,10 +68,10 @@ programa
             	{"SUPER TRUNFO UNO C/ ESCADA NO TETO", "S", "400", "2.9",  "66",  "999",  "810" }}
 
 	//Embaralha as cartas possiveis
-	funcao embaralhar() { 
-		para (i = 0; i < 1; i++) {
+	funcao embaralhar() {
+		para (i = 0; i < 21; i++) {
 			inteiro r = ut.sorteia(0, 20)
-			inteiro aux = cartasPossiveis[i]
+			aux = cartasPossiveis[i]
 			cartasPossiveis[i] = cartasPossiveis[r]
 			cartasPossiveis[r] = aux
 		}
@@ -86,36 +90,105 @@ programa
 	}
 	
 	funcao vez_jogador() {
-		cartaTopo = 0 //cartasJogador[0]
+		cartaTopo = cartasJogador[0]
 		
-		cartaImpressa[1][1] = carros[cartaTopo][0]
-		cartaImpressa[2][1] = carros[cartaTopo][1]
-		cartaImpressa[3][1] = carros[cartaTopo][2]
-		cartaImpressa[4][1] = carros[cartaTopo][3]
-		cartaImpressa[5][1] = carros[cartaTopo][4]
-		cartaImpressa[6][1] = carros[cartaTopo][5]
-		cartaImpressa[7][1] = carros[cartaTopo][6]
+		cartaImpressa[0][1] = carros[cartaTopo][0]
+		cartaImpressa[1][1] = carros[cartaTopo][1]
+		cartaImpressa[2][1] = carros[cartaTopo][2]
+		cartaImpressa[3][1] = carros[cartaTopo][3]
+		cartaImpressa[4][1] = carros[cartaTopo][4]
+		cartaImpressa[5][1] = carros[cartaTopo][5]
+		cartaImpressa[6][1] = carros[cartaTopo][6]
 
+		escreva("======Sua carta======\n")
 		imprimir_carta()
 	}
 
 	funcao vez_pc() {
-		cartaTopo = cartasJogador[0]
+		cartaTopo = cartasPc[0]
 		
-		cartaImpressa[1][1] = carros[cartaTopo][0]
-		cartaImpressa[2][1] = carros[cartaTopo][1]
-		cartaImpressa[3][1] = carros[cartaTopo][2]
-		cartaImpressa[4][1] = carros[cartaTopo][3]
-		cartaImpressa[5][1] = carros[cartaTopo][4]
-		cartaImpressa[6][1] = carros[cartaTopo][5]
-		cartaImpressa[7][1] = carros[cartaTopo][6]
-
+		cartaImpressa[0][1] = carros[cartaTopo][0]
+		cartaImpressa[1][1] = carros[cartaTopo][1]
+		cartaImpressa[2][1] = carros[cartaTopo][2]
+		cartaImpressa[3][1] = carros[cartaTopo][3]
+		cartaImpressa[4][1] = carros[cartaTopo][4]
+		cartaImpressa[5][1] = carros[cartaTopo][5]
+		cartaImpressa[6][1] = carros[cartaTopo][6]
+		
+		escreva("======Carta PC=======\n")
 		imprimir_carta()
+		escolher_carta_pc()
 	}
 
+	funcao escolher_carta_pc() {
+		
+	}
+
+	//quanto o jogador ganha a rodada
+	funcao jogador_ganhou() {
+		aux = cartasJogador[0]
+		cartaRecebida = cartasPc[0]
+
+		//shift-left carta do jogador
+		para (i = 0; i < 5; i++) {
+			cartasJogador[i] = cartasJogador[i + 1]
+		}
+		cartasJogador[5] = -1
+
+		//recebe a carta do oponente e coloca na parte de tras da mao
+		para (i = 0; i < 5; i++) {
+			se (cartasJogador[i] == -1) {
+				cartasJogador[i] = cartaRecebida
+				cartasJogador[i + 1] = aux
+				i = 5
+			}
+		}
+		
+		//Shift-left carta do oponente
+		para (i = 0; i < 5; i++) {
+			cartasPc[i] = cartasPc[i + 1]
+		}
+	}
+
+	//quanto o pc ganha a rodada
+	funcao pc_ganhou() {
+		aux = cartasPc[0]
+		cartaRecebida = cartasJogador[0]
+
+		//shift-left carta jogador
+		para (i = 0; i < 5; i++) {
+			cartasPc[i] = cartasPc[i + 1]
+		}
+		cartasPc[5] = -1
+
+		//recebe a carta do jogador e coloca na parte de tras da mao
+		para (i = 0; i < 5; i++) {
+			se (cartasPc[i] == -1) {
+				cartasPc[i] = cartaRecebida
+				cartasPc[i + 1] = aux
+				i = 5
+			}
+		}
+		
+		//Shift-left carta do jogador
+		para (i = 0; i < 3; i++) {
+			cartasJogador[i] = cartasJogador[i + 1]
+		}
+	}
+
+	//imprime a carta do pc no console
+	funcao imprimir_carta_pc() {
+		para (i = 0; i < 8; i++) {
+			para (j = 0; j < 2; j++) {
+				escreva(cartaImpressa[i][j])
+			}
+			escreva("\n")
+		}
+	}
+	
 	//imprime a carta do jogador no console
 	funcao imprimir_carta() {
-		para (i = 0; i < 9; i++) {
+		para (i = 0; i < 8; i++) {
 			para (j = 0; j < 2; j++) {
 				escreva(cartaImpressa[i][j])
 			}
@@ -129,18 +202,17 @@ programa
 		embaralhar()
 		distribuir_cartas()
 		vez_jogador()
-		
-		faca {
+		/*faca {
 			
-		} enquanto (cartasNaMaoJogadorUm < 6 e cartasNaMaoJogadorPc < 6) //Verifica se alguem venceu
+		} enquanto (cartasNaMaoJogadorUm < 6 e cartasNaMaoJogadorPc < 6) //Verifica se alguem venceu*/
 
 		//Verifica o ganhador
 		se (cartasNaMaoJogadorUm == 6) { 
-			limpa()
-			escreva("-------------------\nO Jogador Venceu :)\n-------------------\n")
+			//limpa()
+			escreva("\n-------------------\nO Jogador Venceu :)\n-------------------\n")
 		} senao {
-			limpa()
-			escreva("---------------------\nA Maquina venceu! :(\n---------------------\n")
+			//limpa()
+			escreva("\n---------------------\nA Maquina venceu! :(\n---------------------\n")
 		}
 	}
 }
@@ -149,9 +221,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3486; 
+ * @POSICAO-CURSOR = 321; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {i, 40, 9, 1}-{j, 40, 12, 1};
+ * @SIMBOLOS-INSPECIONADOS = {cartasJogador, 10, 9, 13}-{aux, 23, 9, 3}-{cartaRecebida, 24, 9, 13};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
