@@ -158,7 +158,7 @@ programa
 				embaralhar_atributos()
 				resposta = atributosPossiveisPc[0]
 				mostrar_atributo(resposta)
-				escreva("\nO jogador escolheu o atributo ", auxAtributo)
+				escreva("\nO computador escolheu o atributo ", auxAtributo)
 				pare
 			caso 1:
 				atributosPossiveisPc[0] = 2
@@ -167,7 +167,7 @@ programa
 				embaralhar_atributos()
 				resposta = atributosPossiveisPc[0]
 				mostrar_atributo(resposta)
-				escreva("\nO jogador escolheu o atributo ", auxAtributo)
+				escreva("\nO computador escolheu o atributo ", auxAtributo)
 				pare
 			caso 2:
 				atributosPossiveisPc[0] = 1
@@ -176,7 +176,7 @@ programa
 				embaralhar_atributos()
 				resposta = atributosPossiveisPc[0]
 				mostrar_atributo(resposta)
-				escreva("\nO jogador escolheu o atributo ", auxAtributo)
+				escreva("\nO computador escolheu o atributo ", auxAtributo)
 				pare
 			caso 3:
 				atributosPossiveisPc[0] = 1
@@ -185,7 +185,7 @@ programa
 				embaralhar_atributos()
 				resposta = atributosPossiveisPc[0]
 				mostrar_atributo(resposta)
-				escreva("\nO jogador escolheu o atributo ", auxAtributo)
+				escreva("\nO computador escolheu o atributo ", auxAtributo)
 				pare
 			caso 4:
 				atributosPossiveisPc[0] = 1
@@ -194,7 +194,7 @@ programa
 				embaralhar_atributos()
 				resposta = atributosPossiveisPc[0]
 				mostrar_atributo(resposta)
-				escreva("\nO jogador escolheu o atributo ", auxAtributo)
+				escreva("\nO computador escolheu o atributo ", auxAtributo)
 				pare
 			caso 5:
 				atributosPossiveisPc[0] = 1
@@ -203,7 +203,7 @@ programa
 				embaralhar_atributos()
 				resposta = atributosPossiveisPc[0]
 				mostrar_atributo(resposta)
-				escreva("\nO jogador escolheu o atributo ", auxAtributo)
+				escreva("\nO computador escolheu o atributo ", auxAtributo)
 				pare
 			caso 6:
 				atributosPossiveisPc[0] = 1
@@ -212,7 +212,7 @@ programa
 				embaralhar_atributos()
 				resposta = atributosPossiveisPc[0]
 				mostrar_atributo(resposta)
-				escreva("\nO jogador escolheu o atributo ", auxAtributo)
+				escreva("\nO computador escolheu o atributo ", auxAtributo)
 				pare
 			caso 7:
 				atributosPossiveisPc[0] = 1
@@ -221,7 +221,7 @@ programa
 				embaralhar_atributos()
 				resposta = atributosPossiveisPc[0]
 				mostrar_atributo(resposta)
-				escreva("\nO jogador escolheu o atributo ", auxAtributo)
+				escreva("\nO computador escolheu o atributo ", auxAtributo)
 				pare
 			caso 8:
 				atributosPossiveisPc[0] = 1
@@ -230,7 +230,7 @@ programa
 				embaralhar_atributos()
 				resposta = atributosPossiveisPc[0]
 				mostrar_atributo(resposta)
-				escreva("\nO jogador escolheu o atributo ", auxAtributo)
+				escreva("\nO computador escolheu o atributo ", auxAtributo)
 				pare
 			caso 9:
 				atributosPossiveisPc[0] = 1
@@ -239,7 +239,7 @@ programa
 				embaralhar_atributos()
 				resposta = atributosPossiveisPc[0]
 				mostrar_atributo(resposta)
-				escreva("\nO jogador escolheu o atributo ", auxAtributo)
+				escreva("\nO computador escolheu o atributo ", auxAtributo)
 				pare
 			caso 10:
 				atributosPossiveisPc[0] = 1
@@ -248,7 +248,7 @@ programa
 				embaralhar_atributos()
 				resposta = atributosPossiveisPc[0]
 				mostrar_atributo(resposta)
-				escreva("\nO jogador escolheu o atributo ", auxAtributo)
+				escreva("\nO computador escolheu o atributo ", auxAtributo)
 				pare
 			caso 11:
 				atributosPossiveisPc[0] = 1
@@ -257,7 +257,7 @@ programa
 				embaralhar_atributos()
 				resposta = atributosPossiveisPc[0]
 				mostrar_atributo(resposta)
-				escreva("\nO jogador escolheu o atributo ", auxAtributo)
+				escreva("\nO computador escolheu o atributo ", auxAtributo)
 				pare
 			caso 12:
 				atributosPossiveisPc[0] = 1
@@ -266,7 +266,7 @@ programa
 				embaralhar_atributos()
 				resposta = atributosPossiveisPc[0]
 				mostrar_atributo(resposta)
-				escreva("\nO jogador escolheu o atributo ", auxAtributo)
+				escreva("\nO computador escolheu o atributo ", auxAtributo)
 				pare
 			caso 13:
 				atributosPossiveisPc[0] = 1
@@ -275,7 +275,7 @@ programa
 				embaralhar_atributos()
 				resposta = atributosPossiveisPc[0]
 				mostrar_atributo(resposta)
-				escreva("\nO jogador escolheu o atributo ", auxAtributo)
+				escreva("\nO computador escolheu o atributo ", auxAtributo)
 				pare
 			caso 14:
 				atributosPossiveisPc[0] = 1
@@ -284,7 +284,7 @@ programa
 				embaralhar_atributos()
 				resposta = atributosPossiveisPc[0]
 				mostrar_atributo(resposta)
-				escreva("\nO jogador escolheu o atributo ", auxAtributo)
+				escreva("\nO computador escolheu o atributo ", auxAtributo)
 				pare
 			caso 15:
 				atributosPossiveisPc[0] = 1
@@ -293,7 +293,7 @@ programa
 				embaralhar_atributos()
 				resposta = atributosPossiveisPc[0]
 				mostrar_atributo(resposta)
-				escreva("\nO jogador escolheu o atributo ", auxAtributo)
+				escreva("\nO computador escolheu o atributo ", auxAtributo)
 				pare
 			caso 16:
 				atributosPossiveisPc[0] = 1
@@ -302,7 +302,7 @@ programa
 				embaralhar_atributos()
 				resposta = atributosPossiveisPc[0]
 				mostrar_atributo(resposta)
-				escreva("\nO jogador escolheu o atributo ", auxAtributo)
+				escreva("\nO computador escolheu o atributo ", auxAtributo)
 				pare
 			caso 17:
 				atributosPossiveisPc[0] = 1
@@ -311,7 +311,7 @@ programa
 				embaralhar_atributos()
 				resposta = atributosPossiveisPc[0]
 				mostrar_atributo(resposta)
-				escreva("\nO jogador escolheu o atributo ", auxAtributo)
+				escreva("\nO computador escolheu o atributo ", auxAtributo)
 				pare
 			caso 18:
 				atributosPossiveisPc[0] = 1
@@ -320,7 +320,7 @@ programa
 				embaralhar_atributos()
 				resposta = atributosPossiveisPc[0]
 				mostrar_atributo(resposta)
-				escreva("\nO jogador escolheu o atributo ", auxAtributo)
+				escreva("\nO computador escolheu o atributo ", auxAtributo)
 				pare
 			caso 19:
 				atributosPossiveisPc[0] = 1
@@ -329,7 +329,7 @@ programa
 				embaralhar_atributos()
 				resposta = atributosPossiveisPc[0]
 				mostrar_atributo(resposta)
-				escreva("\nO jogador escolheu o atributo ", auxAtributo)
+				escreva("\nO computador escolheu o atributo ", auxAtributo)
 				pare
 			caso 20:
 				atributosPossiveisPc[0] = 1
@@ -340,7 +340,7 @@ programa
 				se (carros[cartasJogador[0]][1] == "A") {
 					resposta = atributosPossiveisPc[0]
 					mostrar_atributo(resposta)
-					escreva("\nO jogador escolheu o atributo ", auxAtributo, "\n")
+					escreva("\nO computador escolheu o atributo ", auxAtributo, "\n")
 				} senao {
 					escreva("O oponente tem o super trunfo")
 					escreva("Voce perdeu a rodada porque sua carta tem ranking menor que A :(")
@@ -591,7 +591,7 @@ programa
 					se (carros[cartasJogador[0]][1] == "A") {
 						resposta = atributosPossiveisPc[0]
 						mostrar_atributo(resposta)
-						escreva("\nO jogador escolheu o atributo ", auxAtributo)
+						escreva("\nO computador escolheu o atributo ", auxAtributo)
 						quem_ganhou(resposta)
 					} senao {
 						escreva("\nVoce perdeu a rodada porque sua carta tem ranking menor que A :(")
@@ -623,7 +623,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 14271; 
+ * @POSICAO-CURSOR = 18419; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
