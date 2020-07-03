@@ -117,6 +117,7 @@ programa
 		imprimir_carta_pc()
 	}
 
+	//embaralha os atributos que o pc vai usar
 	funcao embaralhar_atributos() {
 		para (i = 0; i < 3; i++) {
 			inteiro r = ut.sorteia(0, 2)
@@ -126,6 +127,7 @@ programa
 		}
 	}
 
+	//define os atributos que vao ser mostrados
 	funcao mostrar_atributo(inteiro atributo) {
 		escolha (atributo) {
 			caso 1:
@@ -471,6 +473,15 @@ programa
 			jogador_ganhou()
 		}
 	}
+
+	funcao jogar_super_trunfo_pc() {
+		atributosPossiveisPc[0] = 1
+		atributosPossiveisPc[1] = 2
+		atributosPossiveisPc[2] = 5
+		embaralhar_atributos()
+		escreva("O oponente tem o super trunfo\n")
+		imprimir_carta_pc()
+	}
 	
 	//verifica quem granhou a rodada
 	funcao quem_ganhou(inteiro resp) {
@@ -574,14 +585,8 @@ programa
 			se (vezDeQuem == 0) {
 				se (cartasJogador[0] == 20) {
 					jogar_super_trunfo()
-
 				} senao se (cartasPc[0] == 20) {
-					atributosPossiveisPc[0] = 1
-					atributosPossiveisPc[1] = 2
-					atributosPossiveisPc[2] = 5
-					embaralhar_atributos()
-					escreva("O oponente tem o super trunfo\n")
-					imprimir_carta_pc()
+					jogar_super_trunfo_pc()
 					se (carros[cartasJogador[0]][1] == "A") {
 						resposta = atributosPossiveisPc[0]
 						mostrar_atributo(resposta)
@@ -617,7 +622,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 4897; 
+ * @POSICAO-CURSOR = 18234; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
