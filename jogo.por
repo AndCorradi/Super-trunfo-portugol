@@ -452,10 +452,10 @@ programa
 		}
 	}
 
-	//se o jogador estiver com o super trundo essa funcao e usada
+	//se o jogador estiver com o super trundo
 	funcao jogar_super_trunfo() {
 		imprimir_carta_jogador()
-
+		
 		se (carros[cartasPc[0]][1] == "A") {
 			escreva("O oponente tem uma carta nivel \"A\" ")
 			escreva("\nEscolha o atributo:\n1 - Velocidade Maxima\n2 - Aceleraçao\n3 - Cavalos\n4 - Cilindros\n5 - Peso\n--------> ")
@@ -474,6 +474,7 @@ programa
 		}
 	}
 
+	//se o pc estiver com o super trunfo
 	funcao jogar_super_trunfo_pc() {
 		atributosPossiveisPc[0] = 1
 		atributosPossiveisPc[1] = 2
@@ -622,7 +623,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 18234; 
+ * @POSICAO-CURSOR = 14271; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
