@@ -67,7 +67,7 @@ programa
             	{"GM Corsa 1995",                      "C", "192", "9.8",  "108", "1598", "945" },
             	{"GM Kadett 1998",                     "C", "181", "11.9", "109", "1997", "1050"},
             	{"Ford Fiesta 1998",                   "C", "178", "11.4", "89",  "1388", "1009"},
-            	{"VW fusca 1969",                      "D", "105", "45.0", "46",  "1288", "780" },
+            	{"VW fusca do Viotti",                 "D", "105", "45.0", "46",  "1288", "780" },
             	{"Fiat 147 1979",                      "D", "139", "18.6", "61",  "1297", "810" },
             	{"VW Kombi 1987",                      "D", "108", "57.8", "50",  "1588", "1305"},
             	{"Gurgel BR-800 1989",                 "D", "107", "43.5", "32",  "792",  "634" },
@@ -623,7 +623,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 18419; 
+ * @POSICAO-CURSOR = 2813; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
